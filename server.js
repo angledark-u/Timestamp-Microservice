@@ -8,8 +8,8 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-app.get('/api/timestamp/:date_string?', (req, res) => {
-  let dateString = req.params.date_string;
+app.get('/api/:date?', (req, res) => {
+  const dateString = req.params.date;
   let date;
 
   if (!dateString) {
